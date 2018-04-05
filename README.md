@@ -6,6 +6,7 @@
 
 For configuration, you only need to point it to the existing HVAC items, my sample items:
 
+```
 /* Thermostat */
 Group gHVAC
 Number HVAC_HeatSetPoint "Heat Set [%.0f F]" <temperature_hot> (gHVAC){channel="zwave:device:12345678:node1:thermostat_setpoint_heating"} 
@@ -19,10 +20,13 @@ Number HVAC_Operating_State "Op State [MAP(thermostatOpState.map):%s]" <flow> (g
 Number HVAC_Fan_State "Fan State [MAP(thermostatFanState.map):%s]" <fan> (gHVACStatus) {channel="zwave:device:12345678:node1:thermostat_fanstate"}
 Number HVAC_Battery "Battery State [%d %%]" <battery> (gHVACStatus) {channel="zwave:device:12345678:node1:battery-level"}
 Switch HVAC_useCelsius "CT100 useCelsius [%s]" (gHVACStatus)
+```
+
 For the map files, I’m using:
 
 thermostatFanMode.map
 
+```
 0=Auto Low
 1=On Low
 2=Auto High
@@ -30,15 +34,19 @@ thermostatFanMode.map
 4=Unknown
 5=Unknown
 6=Circulate
+```
 
 thermostatFanState.map
 
+```
 0=Idle
 1=Running
 2=Running High
+```
 
 thermostatMode.map:
 
+```
 0=Off
 1=Heat
 2=Cool
@@ -53,9 +61,11 @@ thermostatMode.map:
 11=Heat Econ
 12=Cool Econ
 13=Away
+```
 
 thermostatOpState.map:
 
+```
 0=Idle
 1=Heating
 2=Cooling
@@ -63,3 +73,4 @@ thermostatOpState.map:
 4=Pending Heat
 5=Pending Cool
 6=Vent / Economizer
+```
