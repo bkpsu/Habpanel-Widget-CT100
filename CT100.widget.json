@@ -25,12 +25,12 @@
         },
         {
             "type": "item",
-            "id": "desired_heat",
+            "id": "user_heat",
             "label": "Desired Heat"
         },
         {
             "type": "item",
-            "id": "desired_cool",
+            "id": "user_cool",
             "label": "Desired Cool"
         }
     ],
