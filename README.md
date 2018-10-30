@@ -19,7 +19,6 @@ Number HVAC_Fan_Mode "Fan Mode [MAP(thermostatFanMode.map):%s]" <fan> (gHVACStat
 Number HVAC_Operating_State "Op State [MAP(thermostatOpState.map):%s]" <flow> (gHVACStatus) {channel="zwave:device:12345678:node1:thermostat_state"}
 Number HVAC_Fan_State "Fan State [MAP(thermostatFanState.map):%s]" <fan> (gHVACStatus) {channel="zwave:device:12345678:node1:thermostat_fanstate"}
 Number HVAC_Battery "Battery State [%d %%]" <battery> (gHVACStatus) {channel="zwave:device:12345678:node1:battery-level"}
-Switch HVAC_useCelsius "CT100 useCelsius [%s]" (gHVACStatus)
 ```
 
 For the map files, I’m using:
